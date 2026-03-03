@@ -1,0 +1,121 @@
+<html>
+	<head>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Digital-7&display=swap" rel="stylesheet">
+    	<style>
+        	body{background:offwhite;}
+            
+            .main{background:#008080;
+            width:500px;
+            height:280px;
+            margin:10px auto;
+            display:flex;
+            justify-content:space-around;
+            flex-direction:row;
+            border-radius:5px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.6);}
+            
+            .l-side, .r-side{
+            font-family:sans-serif;
+            margin:0px auto;
+            text-align:center;}
+            
+            #left-team, #right-team{color:white;}
+            
+            #l-display, #r-display{
+            font-family:'Orbitron', sans-serif;
+  		  	font-size: 50px;
+    		color: #ff3b3b;      /* scoreboard red */
+    		letter-spacing: 3px;
+            background:black;
+            width:120px;
+            height:125px;
+            margin-bottom:20px;
+            border-radius:5px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+            display:flex;
+            justify-content:center;
+            align-items:center;}
+            
+            button {
+            font-family:'Orbitron', sans-serif;
+            font-size:20px;
+            border-radius:5px;
+            cursor: pointer;
+        transition: 0.2s ease;}
+        	button:hover{
+            transform:translateY(-2px);}
+            #btn-reset{
+            font-family:'Orbitron', sans-serif;}
+            
+            /*#lnum-el{color:white;
+            font-size:50px;
+            margin:20px;}*/
+        </style>
+    </head>
+    
+    <body>
+    	<div class="main">
+        	<div class="l-side">
+            	<h1 id="left-team">HOME</h1>
+                <div id="l-display"><scan id="lnum-el"></scan></div>
+                <button id="btn1" onclick="addOneL()">+1</button>
+                <button id="btn2" onclick="addTwoL()">+2</button>
+                <button id="btn3" onclick="addThreeL()">+3</button>
+            </div>
+            <div class="r-side">
+            	<h1 id="right-team">GUEST</h1>
+                <div id="r-display"><scan id="rnum-el"></scan></div>
+                <button id="btn1" onclick="addOneR()">+1</button>
+                <button id="btn2" onclick="addTwoR()">+2</button>
+                <button id="btn3" onclick="addThreeR()">+3</button>
+            </div>
+         	<button id="btn-reset" onclick="reset()">Reset Board</button>   
+        </div>
+        
+        <script>
+        	let displayTextL=document.getElementById("lnum-el")
+            let displayTextR=document.getElementById("rnum-el")
+            displayTextL.textContent=0
+            displayTextR.textContent=0
+            let countL = 0
+            let countR = 0
+            
+            function addOneL() {
+            	countL = countL + 1
+            	displayTextL.textContent = countL
+            }
+            function addTwoL() {
+            	countL = countL + 2
+            	displayTextL.textContent = countL
+            }
+            function addThreeL() {
+            	countL = countL + 3
+            	displayTextL.textContent = countL
+            }
+            
+            
+            function addOneR() {
+            	countR = countR + 1
+            	displayTextR.textContent = countR
+            }
+            function addTwoR() {
+            	countR = countR + 2
+            	displayTextR.textContent = countR
+            }
+            function addThreeR() {
+            	countR = countR + 3
+            	displayTextR.textContent = countR
+            }
+            
+            
+            function reset() {
+            	displayTextL.textContent=0
+            	displayTextR.textContent=0
+                countL = 0
+                countR = 0
+                
+            }
+        </script>
+    </body>
+</html>
