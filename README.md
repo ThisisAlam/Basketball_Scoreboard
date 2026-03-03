@@ -30,7 +30,7 @@ The reset button sets both scores back to zero.
 
 ▶️ How to Run
 Clone the repository:
-git clone https://github.com/your-username/your-repo-name.git
+git clone [https://github.com/ThisisAlam/Basketball_Scoreboard.git]
 Open the HTML file in your browser.
 No installation required.
 
